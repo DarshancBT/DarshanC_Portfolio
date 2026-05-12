@@ -149,3 +149,92 @@ function copyPhoneNumber(){
   }, 2000);
 
 }
+// ================= VIEW ALL CERTIFICATES =================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const viewAllBtn =
+  document.getElementById("viewAllBtn");
+
+  const hiddenCertificates =
+  document.querySelectorAll(".extra-certificate");
+
+  let expanded = false;
+
+  viewAllBtn.addEventListener("click", function () {
+
+    hiddenCertificates.forEach(function(card){
+
+      if(expanded){
+
+        card.style.display = "none";
+
+      }
+
+      else{
+
+        card.style.display = "block";
+
+      }
+
+    });
+
+    expanded = !expanded;
+
+    viewAllBtn.innerText =
+    expanded
+    ? "Show Less"
+    : "View All Certificates";
+
+  });
+
+});
+// ================= VIEW ALL PROJECTS =================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const viewProjectsBtn =
+  document.getElementById("viewProjectsBtn");
+
+  const hiddenProjects =
+  document.querySelectorAll(".extra-project");
+
+  let expandedProjects = false;
+
+  viewProjectsBtn.addEventListener("click", function () {
+
+    hiddenProjects.forEach(function(project){
+
+      if(expandedProjects){
+
+        project.style.display = "none";
+
+      }
+
+      else{
+
+        project.style.display = "block";
+
+      }
+
+    });
+
+    expandedProjects = !expandedProjects;
+
+    viewProjectsBtn.innerText =
+    expandedProjects
+    ? "Show Less"
+    : "View All Projects";
+
+  });
+
+});
+
+function openImage(imageSrc) {
+  document.getElementById("imagePopup").style.display = "flex";
+  document.getElementById("popupImg").src = imageSrc;
+}
+
+function closeImage() {
+  document.getElementById("imagePopup").style.display = "none";
+}

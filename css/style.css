@@ -1244,6 +1244,85 @@ body{
   }
 
 }
+/* ================= HIDDEN PROJECTS ================= */
+
+.extra-project{
+  display:none;
+}
+
+/* BUTTON CONTAINER */
+
+.view-projects-container{
+  width:100%;
+
+  display:flex;
+
+  justify-content:center;
+
+  margin-top:60px;
+}
+
+/* BUTTON */
+
+.view-projects-btn{
+  padding:16px 34px;
+
+  border:none;
+
+  border-radius:16px;
+
+  background:#00D4FF;
+
+  color:#000;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.35s ease;
+}
+
+.view-projects-btn:hover{
+  transform:translateY(-5px);
+
+  box-shadow:0 0 35px rgba(0,212,255,0.25);
+}
+.project-card{
+  cursor: pointer;
+}
+
+/* Popup Background */
+.image-popup{
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup Image */
+.image-popup img{
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* Close Button */
+.close-btn{
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
 /* ================= EXPERIENCE SECTION ================= */
 
 .experience{
@@ -1735,6 +1814,9 @@ body{
   overflow:hidden;
 
   transition:0.35s ease;
+
+  display:flex;
+  flex-direction:column;
 }
 
 .achievement-card:hover{
@@ -1841,6 +1923,67 @@ body{
 
   .achievement-content p{
     font-size:14px;
+  }
+
+}
+/* HIDDEN CERTIFICATES */
+
+.extra-certificate{
+  display:none;
+}
+
+
+
+/* BUTTON */
+
+.view-all-container{
+  width:100%;
+
+  display:flex;
+
+  justify-content:center;
+
+  margin-top:60px;
+}
+
+.view-all-btn{
+  padding:16px 34px;
+
+  border:none;
+
+  border-radius:16px;
+
+  background:#00D4FF;
+
+  color:#000;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.35s ease;
+}
+
+.view-all-btn:hover{
+  transform:translateY(-5px);
+
+  box-shadow:0 0 35px rgba(0,212,255,0.25);
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
   }
 
 }
@@ -2326,31 +2469,33 @@ body{
 .footer{
   width:100%;
 
-  padding:70px 10% 30px;
-
   background:#0B0F19;
 
   border-top:1px solid rgba(255,255,255,0.06);
+
+  padding:70px 10% 25px;
 }
 
-/* TOP */
+/* CONTAINER */
 
-.footer-top{
+.footer-container{
   display:flex;
-
-  justify-content:space-between;
 
   align-items:center;
 
+  justify-content:space-between;
+
   gap:40px;
 
-  margin-bottom:50px;
+  flex-wrap:wrap;
+
+  margin-bottom:45px;
 }
 
 /* BRAND */
 
 .footer-brand h2{
-  font-size:34px;
+  font-size:32px;
 
   margin-bottom:12px;
 }
@@ -2374,9 +2519,9 @@ body{
 }
 
 .footer-links a{
-  color:#9CA3AF;
-
   text-decoration:none;
+
+  color:#9CA3AF;
 
   transition:0.3s ease;
 
@@ -2392,18 +2537,14 @@ body{
 .footer-socials{
   display:flex;
 
-  justify-content:center;
-
-  gap:22px;
-
-  margin-bottom:40px;
+  gap:18px;
 }
 
 .footer-socials a{
-  width:55px;
-  height:55px;
+  width:52px;
+  height:52px;
 
-  border-radius:18px;
+  border-radius:16px;
 
   background:#111827;
 
@@ -2423,23 +2564,23 @@ body{
 
   border-color:#00D4FF;
 
-  box-shadow:0 0 25px rgba(0,212,255,0.18);
+  box-shadow:0 0 25px rgba(0,212,255,0.16);
 }
 
 .footer-socials i{
   color:#F3F4F6;
 
-  font-size:22px;
+  font-size:20px;
 }
 
-/* BOTTOM */
+/* COPYRIGHT */
 
 .footer-bottom{
-  text-align:center;
-
-  padding-top:25px;
-
   border-top:1px solid rgba(255,255,255,0.06);
+
+  padding-top:22px;
+
+  text-align:center;
 }
 
 .footer-bottom p{
@@ -2450,20 +2591,16 @@ body{
 
 /* ================= RESPONSIVE ================= */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
   .footer{
-    padding:60px 6% 25px;
+    padding:60px 6% 22px;
   }
 
-  .footer-top{
+  .footer-container{
     flex-direction:column;
 
     text-align:center;
-  }
-
-  .footer-brand h2{
-    font-size:28px;
   }
 
   .footer-links{
@@ -2474,6 +2611,14 @@ body{
 
 @media(max-width:480px){
 
+  .footer-brand h2{
+    font-size:26px;
+  }
+
+  .footer-brand p{
+    font-size:14px;
+  }
+
   .footer-links{
     gap:18px;
   }
@@ -2482,23 +2627,15 @@ body{
     font-size:14px;
   }
 
-  .footer-socials{
-    gap:16px;
-  }
-
   .footer-socials a{
-    width:48px;
-    height:48px;
+    width:46px;
+    height:46px;
 
-    border-radius:15px;
+    border-radius:14px;
   }
 
   .footer-socials i{
     font-size:18px;
-  }
-
-  .footer-bottom p{
-    font-size:13px;
   }
 
 }
