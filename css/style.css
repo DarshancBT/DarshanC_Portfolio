@@ -832,21 +832,21 @@ body{
 
 .skills{
   width:100%;
-  min-height:100vh;
 
   padding:120px 10%;
 
   background:#0B0F19;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 .skills-header{
   text-align:center;
+
   margin-bottom:70px;
 }
 
-/* GRID */
+/* ================= GRID ================= */
 
 .skills-grid{
   display:grid;
@@ -856,7 +856,7 @@ body{
   gap:30px;
 }
 
-/* CARD */
+/* ================= CARD ================= */
 
 .skill-card{
   background:#111827;
@@ -872,7 +872,15 @@ body{
   position:relative;
 
   overflow:hidden;
+
+  display:flex;
+
+  flex-direction:column;
+
+  height:100%;
 }
+
+/* GLOW EFFECT */
 
 .skill-card::before{
   content:"";
@@ -890,6 +898,8 @@ body{
   right:-50px;
 }
 
+/* HOVER */
+
 .skill-card:hover{
   transform:translateY(-10px);
 
@@ -898,7 +908,7 @@ body{
   box-shadow:0 0 30px rgba(0,212,255,0.18);
 }
 
-/* ICON */
+/* ================= ICON ================= */
 
 .skill-icon{
   width:70px;
@@ -909,21 +919,27 @@ body{
   background:rgba(0,212,255,0.12);
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
 
   margin-bottom:25px;
 
   position:relative;
+
   z-index:2;
 }
 
+/* ICON */
+
 .skill-icon i{
   font-size:30px;
+
   color:#00D4FF;
 }
 
-/* TITLE */
+/* ================= TITLE ================= */
 
 .skill-card h3{
   font-size:24px;
@@ -931,19 +947,25 @@ body{
   margin-bottom:25px;
 
   position:relative;
+
   z-index:2;
 }
 
-/* BUBBLES */
+/* ================= BUBBLES ================= */
 
 .skill-bubbles{
   display:flex;
+
   flex-wrap:wrap;
+
   gap:12px;
 
   position:relative;
+
   z-index:2;
 }
+
+/* TAG */
 
 .skill-bubbles span{
   padding:10px 16px;
@@ -961,6 +983,8 @@ body{
   transition:0.3s ease;
 }
 
+/* TAG HOVER */
+
 .skill-bubbles span:hover{
   border-color:#00FFA3;
 
@@ -972,6 +996,10 @@ body{
 /* ================= RESPONSIVE ================= */
 
 @media(max-width:1100px){
+
+  .skills{
+    padding:110px 8%;
+  }
 
   .skills-grid{
     grid-template-columns:repeat(2,1fr);
@@ -985,48 +1013,78 @@ body{
     padding:90px 6%;
   }
 
+  .skills-header{
+    margin-bottom:55px;
+  }
+
   .skills-grid{
     grid-template-columns:1fr;
+
     gap:24px;
   }
 
   .skill-card{
     padding:30px 25px;
+
+    border-radius:24px;
   }
 
   .skill-card h3{
     font-size:22px;
   }
 
+  .skill-icon{
+    width:64px;
+    height:64px;
+  }
+
+  .skill-icon i{
+    font-size:26px;
+  }
+
 }
 
 @media(max-width:480px){
 
+  .skills{
+    padding:80px 5%;
+  }
+
   .skills-header{
-    margin-bottom:50px;
+    margin-bottom:45px;
   }
 
   .skill-card{
-    padding:28px 22px;
-    border-radius:22px;
+    padding:26px 20px;
+
+    border-radius:20px;
   }
 
   .skill-icon{
-    width:60px;
-    height:60px;
+    width:58px;
+    height:58px;
+
+    border-radius:18px;
   }
 
   .skill-icon i{
-    font-size:24px;
+    font-size:22px;
   }
 
   .skill-card h3{
     font-size:20px;
+
+    margin-bottom:20px;
+  }
+
+  .skill-bubbles{
+    gap:10px;
   }
 
   .skill-bubbles span{
     font-size:12px;
-    padding:8px 14px;
+
+    padding:8px 13px;
   }
 
 }
@@ -1034,21 +1092,21 @@ body{
 
 .highlights{
   width:100%;
-  min-height:100vh;
 
   padding:120px 10%;
 
   background:#111827;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 .highlights-header{
   text-align:center;
+
   margin-bottom:70px;
 }
 
-/* GRID */
+/* ================= GRID ================= */
 
 .highlights-grid{
   display:grid;
@@ -1058,7 +1116,7 @@ body{
   gap:30px;
 }
 
-/* CARD */
+/* ================= CARD ================= */
 
 .highlight-card{
   background:#0B0F19;
@@ -1074,7 +1132,15 @@ body{
   position:relative;
 
   overflow:hidden;
+
+  display:flex;
+
+  flex-direction:column;
+
+  height:100%;
 }
+
+/* GLOW EFFECT */
 
 .highlight-card::before{
   content:"";
@@ -1092,6 +1158,8 @@ body{
   right:-60px;
 }
 
+/* HOVER */
+
 .highlight-card:hover{
   transform:translateY(-10px);
 
@@ -1100,7 +1168,7 @@ body{
   box-shadow:0 0 30px rgba(0,255,163,0.12);
 }
 
-/* ICON */
+/* ================= ICON ================= */
 
 .highlight-icon{
   width:72px;
@@ -1111,21 +1179,27 @@ body{
   background:rgba(0,255,163,0.10);
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
 
   margin-bottom:28px;
 
   position:relative;
+
   z-index:2;
 }
 
+/* ICON */
+
 .highlight-icon i{
   font-size:30px;
+
   color:#00FFA3;
 }
 
-/* TITLE */
+/* ================= TITLE ================= */
 
 .highlight-card h3{
   font-size:24px;
@@ -1133,10 +1207,11 @@ body{
   margin-bottom:18px;
 
   position:relative;
+
   z-index:2;
 }
 
-/* TEXT */
+/* ================= TEXT ================= */
 
 .highlight-card p{
   color:#9CA3AF;
@@ -1146,12 +1221,17 @@ body{
   line-height:1.9;
 
   position:relative;
+
   z-index:2;
 }
 
 /* ================= RESPONSIVE ================= */
 
 @media(max-width:1100px){
+
+  .highlights{
+    padding:110px 8%;
+  }
 
   .highlights-grid{
     grid-template-columns:repeat(2,1fr);
@@ -1165,13 +1245,31 @@ body{
     padding:90px 6%;
   }
 
+  .highlights-header{
+    margin-bottom:55px;
+  }
+
   .highlights-grid{
     grid-template-columns:1fr;
+
     gap:24px;
   }
 
   .highlight-card{
     padding:32px 26px;
+
+    border-radius:24px;
+  }
+
+  .highlight-icon{
+    width:66px;
+    height:66px;
+
+    border-radius:20px;
+  }
+
+  .highlight-icon i{
+    font-size:26px;
   }
 
   .highlight-card h3{
@@ -1182,22 +1280,29 @@ body{
 
 @media(max-width:480px){
 
+  .highlights{
+    padding:80px 5%;
+  }
+
   .highlights-header{
-    margin-bottom:50px;
+    margin-bottom:45px;
   }
 
   .highlight-card{
-    border-radius:22px;
+    border-radius:20px;
+
     padding:28px 22px;
   }
 
   .highlight-icon{
-    width:62px;
-    height:62px;
+    width:58px;
+    height:58px;
+
+    border-radius:18px;
   }
 
   .highlight-icon i{
-    font-size:24px;
+    font-size:22px;
   }
 
   .highlight-card h3{
@@ -1206,6 +1311,8 @@ body{
 
   .highlight-card p{
     font-size:14px;
+
+    line-height:1.8;
   }
 
 }
