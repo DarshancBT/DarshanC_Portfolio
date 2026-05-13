@@ -1315,6 +1315,12 @@ body{
     line-height:1.8;
   }
 
+}@media(max-width:768px){
+
+  .highlights{
+    padding:90px 6% 70px;
+  }
+
 }
 /* ================= PROJECTS SECTION ================= */
 
