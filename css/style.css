@@ -632,6 +632,32 @@ body{
   }
 
 }
+/* ================= ABOUT MOBILE FIX ================= */
+
+@media(max-width:768px){
+
+  .about{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:40px;
+
+    padding:90px 6%;
+
+    min-height:auto;
+  }
+
+  .about-left,
+  .about-right{
+    width:100%;
+  }
+
+  .about-right{
+    margin-top:0;
+  }
+
+}
 /* ================= SKILLS SECTION ================= */
 
 .skills{
